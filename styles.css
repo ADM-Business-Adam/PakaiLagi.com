@@ -1,0 +1,249 @@
+/* Reset dan umum styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A2A3A; /* Biru navy gelap */
+    color: white;
+}
+
+/* Taskbar styling */
+.taskbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparan */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.search-box input {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    outline: none;
+}
+
+/* Hamburger menu styling */
+.menu-toggle .icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #3A4A65; /* Warna biru lebih terang */
+    border-radius: 8px;
+    padding: 10px 0;
+    transition: transform 0.3s ease-in-out; /* Animasi transisi */
+}
+
+.nav-items.show {
+    display: block;
+    transform: translateX(0); /* Membuka menu */
+}
+
+.nav-item {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(90, 142, 165, 0.5); /* Transparansi pada hover */
+}
+
+/* Konten pengenalan */
+.intro {
+    padding: 100px 20px 40px;
+    text-align: left;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out; /* Animasi fade-in */
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+/* Styling Kategori Produk */
+.categories {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #2A3C4C; /* Warna background lebih gelap */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.categories h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Menata kategori produk sebagai kotak tombol */
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.category-checkbox {
+    display: none; /* Menyembunyikan checkbox */
+}
+
+.category-label {
+    display: block;
+    background-color: #4A6B7C; /* Warna agak cerah dari background */
+    color: white;
+    padding: 10px 20px; /* Padding untuk membuatnya oval */
+    border-radius: 30px; /* Membuat bentuk lebih oval */
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap; /* Mencegah teks terpotong menjadi dua baris */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: fit-content; /* Menyesuaikan panjang dengan teks */
+}
+
+/* Hover dan Checked */
+.category-label:hover {
+    background-color: #6A8C9D; /* Efek hover lebih cerah */
+    transform: scale(1.05); /* Efek zoom-in saat hover */
+}
+
+.category-checkbox:checked + .category-label {
+    background-color: #3A5566; /* Warna saat kategori dipilih */
+    transform: scale(1.05); /* Efek zoom-in saat dipilih */
+}
+
+
+
+.latest-products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.latest-products h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-slider {
+    display: flex;
+    overflow: hidden;
+    width: 90%; /* Menyesuaikan ukuran slider */
+    margin: 0 auto;
+    transition: transform 0.5s ease-in-out; /* Animasi sliding */
+}
+
+.product-item {
+    background-color: rgba(0, 0, 0, 0.4); /* Transparan */
+    padding: 20px;
+    border-radius: 8px;
+    width: 20%; /* Ukuran tiap produk */
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Efek zoom-in saat hover */
+}
+
+.slider-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Kontak */
+.contact-support {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Animasi untuk elemen */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .taskbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        width: 80%;
+    }
+
+    .category-list {
+        flex-direction: column;
+    }
+
+    .product-slider {
+        flex-direction: column;
+    }
+}

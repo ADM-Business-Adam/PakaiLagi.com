@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web E-Commerce PakaiLagi.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Taskbar (Header) -->
+    <header class="taskbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="icon">&#9776;</div> <!-- Hamburger menu icon -->
+            <div class="nav-items">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">Produk</a>
+                <a href="#" class="nav-item">Kategori</a>
+                <a href="#" class="nav-item">Tentang Kami</a>
+                <a href="#" class="nav-item">Kontak</a>
+            </div>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Cari produk...">
+        </div>
+    </header>
+
+    <!-- Section: Pengkenalan Web -->
+    <section class="intro">
+        <div class="content">
+            <h1>Welcome to PakaiLagi.com</h1>
+            <p>Selamat datang di PakaiLagi.com! Kami adalah platform e-commerce yang menyediakan berbagai kebutuhan kampus dan mahasiswa. Temukan produk berkualitas untuk menunjang kegiatan akademik dan aktivitas sehari-hari. Belanja dengan mudah dan nyaman di sini!</p>
+        </div>
+    </section>
+
+    <!-- Section: Kategori Produk -->
+    <section class="categories">
+        <h2>Kategori Produk</h2>
+        <div class="category-list">
+            <label class="category-item">
+                <input type="checkbox" class="category-checkbox">
+                <span class="category-label">Buku</span>
+            </label>
+            <label class="category-item">
+                <input type="checkbox" class="category-checkbox">
+                <span class="category-label">Alat Tulis</span>
+            </label>
+            <label class="category-item">
+                <input type="checkbox" class="category-checkbox">
+                <span class="category-label">Peralatan Kampus</span>
+            </label>
+            <label class="category-item">
+                <input type="checkbox" class="category-checkbox">
+                <span class="category-label">Elektronik</span>
+            </label>
+        </div>
+    </section>
+
+    <!-- Section: Produk Terbaru -->
+    <section class="latest-products">
+        <h2>Produk Terbaru Kami</h2>
+        <div class="slider-container">
+            <button class="slider-btn prev" onclick="moveSlide('prev')">&#10094;</button>
+            <div class="product-slider">
+                <div class="product-item">
+                    <img src="product1.jpg" alt="Produk 1">
+                    <h3>Produk 1</h3>
+                    <p class="price">Rp 150.000</p>
+                    <p class="stock">Stok: 10</p>
+                </div>
+                <div class="product-item">
+                    <img src="product2.jpg" alt="Produk 2">
+                    <h3>Produk 2</h3>
+                    <p class="price">Rp 250.000</p>
+                    <p class="stock">Stok: 5</p>
+                </div>
+                <div class="product-item">
+                    <img src="product3.jpg" alt="Produk 3">
+                    <h3>Produk 3</h3>
+                    <p class="price">Rp 120.000</p>
+                    <p class="stock">Stok: 15</p>
+                </div>
+                <div class="product-item">
+                    <img src="product4.jpg" alt="Produk 4">
+                    <h3>Produk 4</h3>
+                    <p class="price">Rp 300.000</p>
+                    <p class="stock">Stok: 8</p>
+                </div>
+                <div class="product-item">
+                    <img src="product5.jpg" alt="Produk 5">
+                    <h3>Produk 5</h3>
+                    <p class="price">Rp 400.000</p>
+                    <p class="stock">Stok: 12</p>
+                </div>
+                <div class="product-item">
+                    <img src="product6.jpg" alt="Produk 6">
+                    <h3>Produk 6</h3>
+                    <p class="price">Rp 350.000</p>
+                    <p class="stock">Stok: 7</p>
+                </div>
+            </div>
+            <button class="slider-btn next" onclick="moveSlide('next')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Section: Kontak dan Support -->
+    <section class="contact-support">
+        <h2>Kontak & Support</h2>
+        <p>Untuk pertanyaan lebih lanjut atau dukungan, hubungi kami melalui email di <a href="mailto:support@pakailagi.com">support@pakailagi.com</a> atau telepon di (021) 123-4567.</p>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
